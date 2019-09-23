@@ -1,0 +1,35 @@
+hadoop namenode -format
+
+
+**hive_data 폴더에 있는 데이터넣기**
+load data local inpath '1999.csv'
+overwrite into table airdelay
+partition(delayYear=1999);
+
+**
+sps
+ips
+mr
+tr
+
+hadoop fs -format
+
+Y
+jps
+
+snamenode로 이동
+sps
+ips
+mr
+tr
+jps
+
+
+다시 name
+start-all.sh
+비번3번
+
+
+sf
+
+cd have_data
