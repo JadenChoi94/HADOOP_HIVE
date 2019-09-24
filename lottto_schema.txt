@@ -1,0 +1,18 @@
+
+CREATE TABLE LOTTO2(
+seq_no int,
+Win_no1 string,
+Win_no2 string,
+Win_no3 string,
+Win_no4 string,
+Win_no5 string,
+Win_no6 string,
+Win_no7 string,
+winner_nu string,
+year int,
+month int,
+stn string)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+STORED AS TEXTFILE;

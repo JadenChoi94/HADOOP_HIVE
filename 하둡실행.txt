@@ -12,9 +12,10 @@ ips
 mr
 tr
 
-hadoop fs -format
+hadoop namenode -format
 
 Y
+start-all.sh
 jps
 
 snamenode∑Œ ¿Ãµø
@@ -32,4 +33,4 @@ start-all.sh
 
 sf
 
-cd have_data
+cd hive_data
