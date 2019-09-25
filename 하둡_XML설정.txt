@@ -1,0 +1,82 @@
+ssh 보안설정
+
+ 
+
+vi core-site.xml
+
+   <property>
+
+                        <name>fs.default.name</name>
+
+                        <value>hdfs://NameNode:9000</value>
+
+                </property>
+
+                <property>
+
+                        <name>hadoop.tmp.dir</name>
+
+                        <value>/home/hadoop/hdfs/temp</value>
+
+                </property>
+
+ 
+
+vi hdfs-site.xml
+
+        <property>
+
+                <name>dfs.replication</name>
+
+                <value>1</value>
+
+        </property>
+
+        <property>
+
+                <name>dfs.http.address</name>
+
+                <value>NameNode:50070</value>
+
+        </property>
+
+        <property>
+
+                <name>dfs.secondary.http.address</name>
+
+                <value>SnameNode:50090</value>
+
+        </property>
+
+vi mapred-site.xml
+
+        <property>
+
+                <name>mapred.job.tracker</name>
+
+                <value>NameNode:9001</value>
+
+        </property>
+
+        <property>
+
+                <name>mapred.local.dir</name>
+
+                <value>/home/hadoop/hdfs/mapred</value>
+
+        </property>
+
+        <property>
+
+                <name>mapred.system.dir</name>
+
+                <value>/home/hadoop/hdfs/mapred</value>
+
+        </property>
+
+vi hadoop-env.sh
+# export JAVA_HOME=/usr/lib/j2sdk1.5-sun
+export JAVA_HOME=/usr/local/java
+ 
+vi masters : snamenode 로 수정
+vi slaves : snamenode 로 수정
